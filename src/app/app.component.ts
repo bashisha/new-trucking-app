@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -6,19 +6,26 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html'
+  styleUrls: ['./app.component.scss'],
+  templateUrl: 'app.component.html',
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
-      url: '/home',
-      icon: 'home'
+      title: 'Trucks',
+      url: '/app/tabs/trucks',
+      icon: 'car'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Freights',
+      url: '/app/tabs/freights',
+      icon: 'outlet'
+    },
+    {
+      title: 'About',
+      url: '/app/tabs/about',
+      icon: 'information-circle'
     }
   ];
 
