@@ -30,6 +30,10 @@ const routes: Routes = [
           {
             path: '',
             component: FreightsPage
+          },
+          {
+            path: 'freight-details/:id',
+            loadChildren: '../freight-detail/freight-detail.module#FreightDetailModule'
           }
         ]
       },
